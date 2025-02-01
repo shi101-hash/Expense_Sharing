@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Balance</title>
+</head>
+<body>
+    <h1>Balance Summary</h1>
+    <ul>
+        <li th:each="expense : ${expenses}">
+            <span th:text="${expense.description}"></span> - 
+            <span th:text="${expense.amount}"></span> paid by 
+            <span th:text="${expense.paidBy}"></span>
+        </li>
+    </ul>
+</body>
+</html>

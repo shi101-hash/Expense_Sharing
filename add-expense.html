@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Expense</title>
+</head>
+<body>
+    <h1>Add Expense</h1>
+    <form action="#" th:action="@{/expenses/add}" th:object="${expense}" method="post">
+        <label>Description:</label>
+        <input type="text" th:field="*{description}" required><br>
+
+        <label>Amount:</label>
+        <input type="number" th:field="*{amount}" required><br>
+
+        <label>Paid By:</label>
+        <input type="text" th:field="*{paidBy}" required><br>
+
+        <label>Participants (comma separated):</label>
+        <input type="text" name="participants" required><br>
+
+        <button type="submit">Add Expense</button>
+    </form>
+</body>
+</html>
